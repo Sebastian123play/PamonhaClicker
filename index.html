@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>PAMONHA CLICKER</title>
+		<meta http-equiv=”Content-Type” content=”text/html; charset=utf-8″> 
+		<meta name="google-site-verification" content="g37OgGvU8mvJpe7xG_HbHQR-gmJW8APCmzHKh3XSAws" />
+		<link rel="stylesheet" type="text/css" href="CSSses/style.css">
+		<script type="text/javascript" src="javascripts/jquery-3.6.0.min.js"></script>
+	</head>
+
+	<body style="background-color: rgb(26, 26, 26);">
+		<center>
+			<div class="coisasDoMeio">
+				<p>Quantidade de pamonhas:   <span id="score">0</span></p>
+				<p>Quantidade de dinheiro:   <span id="quantidadeDeDinheiro">50</span></p>
+				
+			</div>		
+			<div class="coisasDoMeioImagem">
+				<img src="imagens/pamonha clicker.jpg" id='imagem da pamonha' height="256px" onclick="addScore(quantidadeDePamonhaParaAumentar)">
+			</div>
+			<div class="coisasDoMeioImagem">
+				<img src="imagens/salvar.jpg" style="position: static;left: 630px;top: 355px" height="64px" width="64px" onclick="saveGame()">
+			</div>
+		</center>
+
+		<table class="GanharDinheiro_row" onclick="addDinheiro(1)">
+			<tr>
+				<td>
+					<img src="imagens/dinheiro.jpg" id="imagemDoDinheiro" height="64px" width="64px">
+				</td>
+				<td id="Nome"> 
+					<p>Ganhar dinheiro</p>
+				</td>
+			</tr>
+		</table>
+
+		<table class="DuplicarPamonha_row" onclick="doublePamonhaGain()">
+			<tr>
+				<td id="NomeECusto">
+					<p>Duplicar os  ganhos de pamonha</p>
+					<p>Custo: <span id="custoParaDuplicarPamonhaGain">30</span> dinheiros</p>
+					<p>Multiplicador: <span id="multiplicadorDePamonha">1</span>x</p>
+				</td>
+			</tr>
+		</table>
+
+		<table class="GeradorDeDinheiro_row" onclick="comprarGeradorDeDinheiro()">
+			<tr>
+				<td>
+					<img src="imagens/Gerador.jpg" id="imagemDoGerador" height="64px" width="64px">
+				</td>
+				<td id="NomeECusto">
+					<p>Gerador de dinheiro</p>
+					<p>Custo: <span id="geradorDeDinheiro_custo">30</span> dinheiros</p>
+					<p>Quantidade: <span id="geradorDeDinheiro_quantidade">0</span></p>
+				</td>
+			</tr>
+		</table>
+
+		<table class="LojaDePamonha_row" onclick="pamonhaLoja()">
+			<tr>
+				<td>
+					<img src="imagens/lojinha.jpg" id="imagemDaLojinha" height="64px" width="64px">
+				</td>
+				<td id="NomeECusto">
+					<p>Lojinha de pamonha</p>
+					<p>Custo: <span id="pamonhaLoja_custo">1000000</span> pamonhas</p>
+					<p>Quantidade: <span id="pamonhaLoja_quantidade">0</span></p>
+				</td>
+			</tr>
+		</table>
+
+		<table class="UpgradeScreen_row">
+			<tr>
+				<td id="UpgradeScreen_text">
+					<p>Upgrades</p>
+				</td>
+				<td>
+					<button id="UpgradeScreen_exit" onclick="fecharUpgradeTabButton()">sair</button>
+				</td>	
+			</tr>
+		</table>
+
+		<table class="UpgradeButton_row" onclick="apertarUpgradeTabButton()">
+			<tr>
+				<td id="upgradeButton_text">
+					<p>Upgrades</p>
+					<p>(usando pamonhas infinitas)</p>
+				</td>
+			</tr>
+		</table>
+
+		<table class="GeradorDePamonha_row" onclick="comprarGeradorDePamonha()">
+			<tr>
+				<td id="Nome">
+					<p>Gerador de pamonha</p>
+				</td>
+				<td id="CustoEQuantidade">
+					<p>Custo: <span id="GeradorDePamonha_custo">1</span> pamonha infinita</p>
+					<p>Quantidade: <span id="GeradorDePamonha_quantidade">0</span></p>
+					<p id="PorSegundo"><span id="GeradorDePamonha_PorSegundo">0</span> pamonhas por segundo</p>
+				</td>
+			</tr>
+		</table>
+
+		<span id="UpgradeTabButton"></span>
+		<span id="UpgradeScreen"></span>
+		<span id="GeradorDePamonha"></span>
+
+		<p style="position: absolute;  left: 1080px;  top: 250px; color: white;">Pamonhas vendidas:   <span id="pamonhaVendida">0</span></p>
+
+		<p style="position: absolute;  left: 1000px;  top: 440px; color: white;" id="quantidadeDePamonhaInfinita_texto"></p>
+
+		<p style="position: absolute;  left: 1225px;  top: 440px; color: white;" id="quantidadeDePamonhaInfinita"></p>
+
+		<p><span id="ganharPamonhaInfinita"></span></p>
+		
+		<script type="text/javascript" src="javascripts/game.js"></script>
+		<script type="text/javascript" src="javascripts/updateTab.js"></script>
+	
+	</body>
+
+</html>
