@@ -17,7 +17,7 @@ function comprarGeradorDePamonha(){
 		quantidadeDePamonhaInfinita = quantidadeDePamonhaInfinita - geradorDePamonha_custo;
 		geradorDePamonha_quantidade = geradorDePamonha_quantidade + 1;
 		geradorDePamonha_custo = geradorDePamonha_custo + 1;
-		geradorDePamonha_PorSegundo = 2 ** geradorDePamonha_quantidade;
+		geradorDePamonha_PorSegundo = 2 ** geradorDePamonha_quantidade ** quantidadeDePamonhaParaAumentar;
 		
 
 		document.getElementById("GeradorDePamonha_custo").innerHTML = geradorDePamonha_custo;
